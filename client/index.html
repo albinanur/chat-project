@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='app'>
+<head>
+	<meta charset="UTF-8">
+	<title>Project Spring</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link href="styles/svg_blur.css" rel="stylesheet"/>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="angular/angular.js"></script>
+	<script src="angular-route/angular-route.js"></script>
+	<script src="app.js"></script>
+	<script src="/socket.io/socket.io.js"></script>
+	<script src="./controllers/sessionController.js"></script>
+	<script src="./factories/sessionFactory.js"></script>
+	<style>
+	body {
+    	margin: 0;
+	}
+  	.carousel-inner > .item > img,
+  	.carousel-inner > .item > a > img {
+      width: 60%;
+      margin: auto;
+      
+ 	}
+ 	.carousel{
+ 		margin-left: 40px;
+ 	}
+ 	.container-inner{
+ 		position: absolute;
+    	z-index: 99;
+    	width: 90%;
+ 	}
+ 	.container{
+ 		position: absolute;
+    	overflow: hidden;
+    	width: 100%;
+    	height: 100%;
+ 	}
+ 	
+ 	.sign-form{
+ 	text-align: center;
+ 	margin: 10px;
+ 	}
+	.name{
+		margin-top: 20px;
+		width: 300px;
+		height: 40px;
+		margin-bottom: 20px;
+	}
+ 	
+ 	.text{
+ 		text-align: center;
+ 		font-weight: bold;
+ 	}
+ 	#svg-image-blur
+	{
+    	width: 100%;
+    	height: 100%;
+	}
+
+	.svg-image
+	{
+    	width: 100%;
+    	height: 100%; 
+    	filter:url(#blur-effect);
+	}
+  </style>
+</head>
+<body>
+	<div ng-view=''></div>
+	
+</body>
+</html>
